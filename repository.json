@@ -1,27 +1,62 @@
 [
     {
         "name": "My Calculator",
-        "type": "deploy",
+        "type": "deploy codes",
         "link": "Calculator/"
     },
     {
         "name": "My Quiz App",
-        "type": "deploy",
+        "type": "deploy codes",
         "link": "Quiz-App/"
     },
     {
         "name": "My Movie Rccommendation App",
-        "type": "deploy",
+        "type": "deploy codes",
         "link": "Movie-Recommended-App/"
     },
     {
         "name": "My JS Assignment 1",
-        "type": "deploy",
+        "type": "Practice codes",
         "link": "JS-Assignment-1/"
     },
     {
         "name": "My Chap 9 to 11",
-        "type": "practice",
+        "type": "Practice codes",
         "link": "Chap-9-11/"
+    },
+    {
+        "name": "My Clock",
+        "type": "Practice codes",
+        "link": "Clock/"
+    },
+    {
+        "name": "Crash Assignment 1",
+        "type": "Practice codes",
+        "link": "Crash-Assignment-1/"
+    },
+    {
+        "name": "Arduino-Programs",
+        "type": "Arduino Code",
+        "link": "Arduino-Programs/"
+    },
+    {
+        "name": "My Chap 6 to 9",
+        "type": "Practice codes",
+        "link": "Chap-6-9/"
+    },
+    {
+        "name": "Adam Portfolio",
+        "type": "Practice codes",
+        "link": "Adam-portfolio/"
+    },
+    {
+        "name": "Java Crash Practice codes",
+        "type": "Practice codes",
+        "link": "Java-Crash-Practice codes/"
+    },
+    {
+        "name": "Assignment1",
+        "type": "Practice codes",
+        "link": "Assignment-1/"
     }
 ]
