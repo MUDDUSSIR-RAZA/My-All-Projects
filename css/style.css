@@ -10,6 +10,7 @@ footer {
     align-items: center;
     font-size: 12px;
     height: 5vh;
+    text-align: center;
 }
 
 nav {
@@ -27,6 +28,7 @@ button {
     padding: .1%;
     margin: .5%;
     border-radius: 7px;
+    text-align: center;
 }
 
 input {
@@ -67,7 +69,6 @@ main {
     width: 17vw;
     z-index: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow: auto;
@@ -83,8 +84,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5vh 0;
+    margin: 3.5vh 0;
     padding: 12px 10px;
+    text-align: center;
 }
 
 .name:hover {
@@ -105,7 +107,7 @@ footer {
     height: 60vh;
     width: 40vw;
     border-radius: 10px;
-       display: none;
+    display: none;
 }
 
 .x {
@@ -126,7 +128,7 @@ footer {
     height: 91.7%;
     justify-content: space-around;
     background-color: aliceblue;
-    border-radius: 0 0 8px 8px ;
+    border-radius: 0 0 8px 8px;
 
 }
 
