@@ -36,7 +36,7 @@
     },
     {
         "name": "Arduino Programs",
-        "type": "Arduino Code",
+        "type": "Arduino Codes",
         "link": "Arduino-Programs/"
     },
     {
@@ -51,13 +51,8 @@
     },
     {
         "name": "Java Crash Practice codes",
-        "type": "Practice codes",
-        "link": "Java-Crash-Practice codes/"
-    },
-    {
-        "name": "Assignment1",
-        "type": "Practice codes",
-        "link": "Assignment-1/"
+        "type": "Only Code",
+        "link": "Java-Crash-Practice/"
     },
     {
         "name": "My All Repositories",
