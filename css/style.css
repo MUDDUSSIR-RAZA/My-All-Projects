@@ -51,7 +51,6 @@ main {
     align-items: center;
     background-color: #032e43;
     border-radius: 10px;
-    display: none;
 }
 
 .column {
@@ -84,7 +83,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4vh 0;
+    margin: 5vh 0;
     padding: 12px 10px;
 }
 
@@ -106,7 +105,7 @@ footer {
     height: 60vh;
     width: 40vw;
     border-radius: 10px;
-       /* display: none; */
+       display: none;
 }
 
 .x {
