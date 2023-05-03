@@ -2,6 +2,12 @@
     const response = await fetch("repository.json");
     const repositories = await response.json();
 
+    repositories.sort((a, b) => {
+        if (a.name > b.name) return 1;
+        if (a.name < b.name) return -1;
+        return 0;
+    })
+
     let select = document.querySelector(".select");
     let input = document.querySelector(".input");
     let btn = document.querySelector(".btn");
@@ -91,6 +97,13 @@
 
         displayResult(filteredRepositories);
     }
+    
+    let numPad = event => {
+        if (event.key === "Enter") {
+            filterRepositories();
+        }
+    }
+    document.addEventListener("keydown", numPad);
 
     select.addEventListener("change", filterRepositories);
     btn.addEventListener("click", filterRepositories);
