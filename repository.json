@@ -1,0 +1,27 @@
+[
+    {
+        "name": "My Calculator",
+        "type": "deploy",
+        "link": "Calculator/"
+    },
+    {
+        "name": "My Quiz App",
+        "type": "deploy",
+        "link": "Quiz-App/"
+    },
+    {
+        "name": "My Movie Rccommendation App",
+        "type": "deploy",
+        "link": "Movie-Recommended-App/"
+    },
+    {
+        "name": "My JS Assignment 1",
+        "type": "deploy",
+        "link": "JS-Assignment-1/"
+    },
+    {
+        "name": "My Chap 9 to 11",
+        "type": "practice",
+        "link": "Chap-9-11/"
+    }
+]
