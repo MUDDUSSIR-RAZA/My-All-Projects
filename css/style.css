@@ -130,7 +130,7 @@ main {
     transition: all .3s;
 }
 
-.notFound{
+.notFound {
     display: none;
 }
 
