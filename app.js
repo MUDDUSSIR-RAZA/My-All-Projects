@@ -49,8 +49,9 @@
             linksDiv.appendChild(aCode);
         }
     }
-
+    
     let displayResult = (fullData) => {
+        console.log(fullData);
         nameDivs.innerHTML = "";
         fullData.forEach((data) => {
             let nameDiv = document.createElement("div");
@@ -62,6 +63,9 @@
     }
 
     let filterRepositories = () => {
+        container.style.display = "flex";
+        allLinks.style.display = "none";
+
         let filteredRepositories = [];
         filteredRepositories = repositories;
 
