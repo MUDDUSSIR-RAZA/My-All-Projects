@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    font-family: "Orbitron", sans-serif;
 }
 
 header,
@@ -91,11 +92,38 @@ main {
     margin: 3.5vh 0;
     padding: 12px 10px;
     text-align: center;
+    color: #f30aeb;
+    animation: shadow 10s infinite;
+}
+
+/* Keyframes for box-shadow animation */
+@keyframes shadow {
+
+    0%,
+    30%,
+    60%,
+    90% {
+        box-shadow: 0px 0px 10px #c10add, 0px 0px 10px #ee0707, 0px 0px 10px #ee6707;
+    }
+
+    10%,
+    40%,
+    70%,
+    95% {
+        box-shadow: 0px 0px 10px #15b8e1, 0px 0px 10px #07ee12, 0px 0px 10px #bcc13b;
+    }
+
+    20%,
+    50%,
+    80%,
+    100% {
+        box-shadow: 0px 0px 10px #c4e80e, 0px 0px 10px #ee079d, 0px 0px 10px #16b47a;
+    }
 }
 
 .name:hover {
     width: 14vw;
-    /* margin: 6vh 0; */
+    margin: 5vh 0;
     background-color: #f3d00a;
     border: #43759c solid;
     color: #0f3244;
@@ -152,6 +180,8 @@ a {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 10px #0654c3;
+    background-color: #032e43;
+    animation: shadow 10s infinite;
 }
 
 a:hover {
