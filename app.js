@@ -10,6 +10,7 @@
     let allLinks = document.querySelector(".allLinks");
     let linksDiv = document.querySelector(".links");
     let x = document.querySelector(".x");
+    let notFound = document.querySelector(".notFound");
 
     const typeOptions = [...new Set(repositories.map(obj => obj.type).filter(Boolean))];
 
@@ -23,19 +24,21 @@
     let cross = () => {
         container.style.display = "flex";
         allLinks.style.display = "none";
+        notFound.style.display = "none";
     }
 
     let displayLink = (links) => {
         linksDiv.innerHTML = "";
         container.style.display = "none";
         allLinks.style.display = "block";
+        notFound.style.display = "none";
         if (links.type === "Project codes" || links.type === "Practice codes") {
             let aCode = document.createElement("a");
             aCode.innerHTML = `Code Link`;
             aCode.target = "blank";
             aCode.href = `https://github.com/muddussir-raza/${links.link}`;
             linksDiv.appendChild(aCode);
-            
+
             let aDeploy = document.createElement("a");
             aDeploy.innerHTML = `Deploy Link`;
             aDeploy.target = "blank";
@@ -49,22 +52,28 @@
             linksDiv.appendChild(aCode);
         }
     }
-    
+
     let displayResult = (fullData) => {
-        console.log(fullData);
         nameDivs.innerHTML = "";
-        fullData.forEach((data) => {
-            let nameDiv = document.createElement("div");
-            nameDiv.innerHTML = data.name;
-            nameDiv.className = "name";
-            nameDiv.addEventListener("click", () => displayLink(data));
-            nameDivs.appendChild(nameDiv);
-        })
+        if (fullData.length > 0) {
+            fullData.forEach((data) => {
+                let nameDiv = document.createElement("div");
+                nameDiv.innerHTML = data.name;
+                nameDiv.className = "name";
+                nameDiv.addEventListener("click", () => displayLink(data));
+                nameDivs.appendChild(nameDiv);
+            })
+        } else {
+            container.style.display = "none";
+            allLinks.style.display = "none";
+            notFound.style.display = "flex";
+        }
     }
 
     let filterRepositories = () => {
         container.style.display = "flex";
         allLinks.style.display = "none";
+        notFound.style.display = "none";
 
         let filteredRepositories = [];
         filteredRepositories = repositories;
