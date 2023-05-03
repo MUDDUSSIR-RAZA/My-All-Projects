@@ -98,6 +98,10 @@ main {
     transition: all .3s;
 }
 
+.notFound{
+    display: none;
+}
+
 footer {
     position: fixed;
     bottom: 0;
