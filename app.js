@@ -29,7 +29,7 @@
         linksDiv.innerHTML = "";
         container.style.display = "none";
         allLinks.style.display = "block";
-        if (links.type === "deploy codes" || links.type === "Practice codes") {
+        if (links.type === "Project codes" || links.type === "Practice codes") {
             let aCode = document.createElement("a");
             aCode.innerHTML = `Code Link`;
             aCode.target = "blank";
