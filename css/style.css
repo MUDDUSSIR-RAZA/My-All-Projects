@@ -75,7 +75,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5vh 0;
+    margin: 4vh 0;
     padding: 12px 10px;
 }
 
@@ -100,11 +100,11 @@ footer {
     display: none;
 }
 
-.x{
+.x {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    border-radius: 8px  8px  0  0;
+    border-radius: 8px 8px 0 0;
 }
 
 .x p {
@@ -133,3 +133,58 @@ a:hover {
     background-color: #753a88;
     transition: all .5s;
 }
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #032e43;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #cc2b5e, #753a88);
+    border-radius: 1em;
+    border: 0.2em solid #032e43;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #753a88, #cc2b5e);
+}
+
+/* Circle shape */
+::-webkit-scrollbar-corner {
+    background-color: #F5F5F5;
+}
+
+/* Set the scrollbar to appear when the mouse is over the div */
+.nameDivs:hover::-webkit-scrollbar-thumb {
+    border-radius: 0.5em;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* Set the scrollbar to shrink as it moves up the div */
+.nameDivs::-webkit-scrollbar-thumb {
+    height: 6em;
+    width: 0.5em;
+    border-radius: 1em;
+    background: linear-gradient(to bottom, #cc2b5e, #753a88);
+}
+
+.nameDivs::-webkit-scrollbar-thumb:vertical {
+    -webkit-transform: translateY(calc(var(--scroll-percentage) * (100% - 1.5em - 6em)));
+    transform: translateY(calc(var(--scroll-percentage) * (100% - 1.5em - 6em)));
+}
+
+/* Set the scrollbar to grow as it moves down the div */
+.nameDivs::-webkit-scrollbar-thumb:vertical:active {
+    border-radius: 0.5em;
+    height: 1.5em;
+    width: 1.5em;
+}
+
