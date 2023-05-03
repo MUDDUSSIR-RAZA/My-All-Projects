@@ -31,6 +31,10 @@ button {
     text-align: center;
 }
 
+option {
+    text-align: center;
+}
+
 input {
     width: 30%;
     height: 3.4vh;
@@ -91,7 +95,7 @@ main {
 
 .name:hover {
     width: 14vw;
-    margin: 6vh 0;
+    /* margin: 6vh 0; */
     background-color: #f3d00a;
     border: #43759c solid;
     color: #0f3244;
