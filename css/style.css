@@ -5,7 +5,10 @@
 header,
 footer {
     background-image: linear-gradient(to bottom, #cc2b5e, #753a88);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
     height: 5vh;
 }
 
@@ -23,11 +26,16 @@ button {
     text-align: center;
     padding: .1%;
     margin: .5%;
-    border-radius: 10px;
+    border-radius: 7px;
+}
+
+input {
+    width: 30%;
+    height: 3.4vh;
 }
 
 main {
-    height: calc(100vh - 16.8vh);
+    height: calc(100vh - 15vh);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +51,7 @@ main {
     align-items: center;
     background-color: #032e43;
     border-radius: 10px;
+    display: none;
 }
 
 .column {
@@ -94,10 +103,10 @@ footer {
 
 .allLinks {
     border: #a0f70a solid;
-    height: 35vh;
-    width: 25vw;
+    height: 60vh;
+    width: 40vw;
     border-radius: 10px;
-    display: none;
+       /* display: none; */
 }
 
 .x {
@@ -115,8 +124,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 85%;
+    height: 91.7%;
     justify-content: space-around;
+    background-color: aliceblue;
+    border-radius: 0 0 8px 8px ;
+
 }
 
 a {
@@ -127,6 +139,7 @@ a {
     text-align: center;
     padding: 25px;
     border-radius: 8px;
+    box-shadow: 0 0 10px #0654c3;
 }
 
 a:hover {
@@ -187,4 +200,3 @@ a:hover {
     height: 1.5em;
     width: 1.5em;
 }
-
