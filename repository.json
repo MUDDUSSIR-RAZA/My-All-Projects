@@ -26,7 +26,7 @@
     },
     {
         "name": "My Clock",
-        "type": "Practice codes",
+        "type": "deploy codes",
         "link": "Clock/"
     },
     {
@@ -35,7 +35,7 @@
         "link": "Crash-Assignment-1/"
     },
     {
-        "name": "Arduino-Programs",
+        "name": "Arduino Programs",
         "type": "Arduino Code",
         "link": "Arduino-Programs/"
     },
@@ -58,5 +58,10 @@
         "name": "Assignment1",
         "type": "Practice codes",
         "link": "Assignment-1/"
+    },
+    {
+        "name": "My All Repositories",
+        "type": "ALL Repository codes",
+        "link": "My-All-Repositories/"
     }
 ]
