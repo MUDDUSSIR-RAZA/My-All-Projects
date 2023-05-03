@@ -24,6 +24,11 @@
         padding: 10px 10px;
     }
 
+    .name:hover {
+        width: 30vw;
+        padding: 13px;
+    }
+
     .allLinks {
         height: 50vh;
         width: 60vw;
@@ -98,6 +103,10 @@
         width: 36vw;
         border-radius: 6px;
     }
+    
+    .name:hover {
+        width: 40vw;
+    }
 }
 
 
@@ -123,6 +132,10 @@
     .name {
         width: 43vw;
         border-radius: 6px;
+    }
+       
+    .name:hover {
+        width: 47vw;
     }
 
     .allLinks {
