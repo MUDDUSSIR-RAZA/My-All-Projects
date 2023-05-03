@@ -1,17 +1,17 @@
 [
     {
         "name": "My Calculator",
-        "type": "deploy codes",
+        "type": "Project codes",
         "link": "Calculator/"
     },
     {
         "name": "My Quiz App",
-        "type": "deploy codes",
+        "type": "Project codes",
         "link": "Quiz-App/"
     },
     {
         "name": "My Movie Rccommendation App",
-        "type": "deploy codes",
+        "type": "Project codes",
         "link": "Movie-Recommended-App/"
     },
     {
@@ -26,7 +26,7 @@
     },
     {
         "name": "My Clock",
-        "type": "deploy codes",
+        "type": "Project codes",
         "link": "Clock/"
     },
     {
