@@ -97,7 +97,7 @@
 
         displayResult(filteredRepositories);
     }
-    
+
     let numPad = event => {
         if (event.key === "Enter") {
             filterRepositories();
