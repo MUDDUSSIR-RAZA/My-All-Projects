@@ -1,0 +1,131 @@
+@media only screen and (max-width : 715px) {
+    main {
+        height: calc(100vh - 15vh);
+    }
+
+    header,
+    footer {
+        font-size: 10px;
+        height: 5vh;
+    }
+
+    select,
+    input,
+    button {
+        width: 20%;
+        margin: 1% 0;
+        border-radius: 6px;
+    }
+
+     input {
+        width: 30%;
+        font-size: 8px;
+    }
+
+    .container {
+        width: 50vw;
+    }
+
+    .column {
+        width: 20vw;
+        border-radius: 10px;
+    }
+
+    .nameDivs {
+        height: 70vh;
+        width: 40vw;
+    }
+
+    .name {
+        width: 28vw;
+        border-radius: 8px;
+        margin: 5vh 0;
+        padding: 10px 10px;
+    }
+    
+    .allLinks {
+        border: #a0f70a solid;
+        height: 50vh;
+        width: 60vw;
+        border-radius: 10px;
+    }
+
+    
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    justify-content: space-around;
+    background-color: aliceblue;
+    border-radius: 0 0 8px 8px ;
+}
+}
+
+@media (max-width : 550px) {
+
+    select,
+    button,
+    input {
+        font-size: 10px;
+    }
+    
+    input {
+        height: 3.3vh;
+        width: 30%;
+    }
+    
+    .container {
+        width: 65vw;
+    }
+
+    .column {
+        width: 25vw;
+        border-radius: 10px;
+    }
+    
+    .nameDivs {
+        height: 70vh;
+        width: 50vw;
+    }
+
+    .name {
+        width: 36vw;
+        border-radius: 6px;
+    }
+}
+
+
+@media (max-width : 350px) {
+    input {
+        width: 30%;
+        font-size: 8px;
+    }
+    
+    .container {
+        width: 80vw;
+    }
+    
+    .column {
+        width: 30vw;
+        border-radius: 8px;
+    }
+    
+    .nameDivs {
+        width: 60vw;
+    }
+    
+    .name {
+        width: 43vw;
+        border-radius: 6px;
+    }
+    
+    .allLinks {
+        height: 45vh;
+        width: 80vw;
+    }
+    
+    .links {
+    height: 89.2%;
+    }
+}
