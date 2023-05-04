@@ -1,18 +1,13 @@
 (async function () {
-    // Use the Fetch API to fetch a JSON file called "repository.json".
     const response = await fetch("repository.json");
-
-    // Parse the response as JSON and assign it to the "repositories" variable.
     const repositories = await response.json();
 
-    // Sort the "repositories" array using a comparator function that compares the "name" property of each object.
     repositories.sort((a, b) => {
         if (a.name > b.name) return 1;
         if (a.name < b.name) return -1;
         return 0;
-    });
+    })
 
-    //This code initializes variables by selecting DOM elements with the corresponding class names.
     let select = document.querySelector(".select");
     let input = document.querySelector(".input");
     let btn = document.querySelector(".btn");
@@ -22,25 +17,22 @@
     let linksDiv = document.querySelector(".links");
     let x = document.querySelector(".x");
     let notFound = document.querySelector(".notFound");
-    // Add a "click" event listener to the search button, which calls the searchRepositories() function.
-    btn.addEventListener("click", searchRepositories);
 
-    // Add a "keydown" event listener to the search input, which listens for the "Enter" key,
-    // and calls the searchRepositories() function when it is pressed.
-    input.addEventListener("keydown", event => {
-        if (event.key === "Enter") {
-            searchRepositories();
-        }
-    });
+    const typeOptions = [...new Set(repositories.map(obj => obj.type).filter(Boolean))];
 
-    //This code sets the display of container, allLinks, and notFound elements to their initial values.
+    typeOptions.forEach(options => {
+        const option = document.createElement("option");
+        option.innerText = options;
+        option.value = options;
+        select.appendChild(option);
+    })
+
     let cross = () => {
         container.style.display = "flex";
         allLinks.style.display = "none";
         notFound.style.display = "none";
     }
 
-    //This code takes a repository object and generates HTML for links to the corresponding GitHub code and web pages.
     let displayLink = (links) => {
         linksDiv.innerHTML = "";
         container.style.display = "none";
@@ -67,7 +59,6 @@
         }
     }
 
-    //This code takes an array of repository objects, generates HTML for each repository name.
     let displayResult = (fullData) => {
         nameDivs.innerHTML = "";
         if (fullData.length > 0) {
@@ -85,7 +76,6 @@
         }
     }
 
-    //This code filters the "repositories" array based on the selected "type" option and the search input value.
     let filterRepositories = () => {
         container.style.display = "flex";
         allLinks.style.display = "none";
@@ -108,7 +98,6 @@
         displayResult(filteredRepositories);
     }
 
-    //This code listens for the "Enter" keypress event and calls the filterRepositories() function when it occurs.
     let numPad = event => {
         if (event.key === "Enter") {
             filterRepositories();
@@ -116,7 +105,6 @@
     }
     document.addEventListener("keydown", numPad);
 
-    //Attaches event listeners to the select dropdown, button, and close icon and calls the filterRepositories function and clears the input field.
     select.addEventListener("change", filterRepositories);
     btn.addEventListener("click", filterRepositories);
     x.addEventListener("click", cross);
