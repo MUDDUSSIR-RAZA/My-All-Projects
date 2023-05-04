@@ -46,7 +46,7 @@
             linksDiv.appendChild(aCode);
 
             let aDeploy = document.createElement("a");
-            aDeploy.innerHTML = `Deploy Link`;
+            aDeploy.innerHTML = `Web Link`;
             aDeploy.target = "blank";
             aDeploy.href = `https://muddussir-raza.github.io/${links.link}`;
             linksDiv.appendChild(aDeploy);
