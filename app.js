@@ -51,11 +51,25 @@
             aCode.target = "blank";
             aCode.href = `https://github.com/muddussir-raza/${links.link}`;
             linksDiv.appendChild(aCode);
-
             let aDeploy = document.createElement("a");
             aDeploy.innerHTML = `Web Link`;
             aDeploy.target = "blank";
             aDeploy.href = `https://muddussir-raza.github.io/${links.link}`;
+            linksDiv.appendChild(aDeploy);
+        } else if (links.type === "Working") {
+            container.style.display = "none";
+            allLinks.style.display = "none";
+            notFound.style.display = "flex";
+            notFound.innerHTML = `<h1>On Working!</h1>`;
+        } else if (links.type === "without deploy") {
+            let aCode = document.createElement("a");
+            aCode.innerHTML = `Code Link`;
+            aCode.target = "blank";
+            aCode.href = `https://github.com/muddussir-raza/${links.link}`;
+            linksDiv.appendChild(aCode);
+            let aDeploy = document.createElement("a");
+            aDeploy.innerHTML = `<h3>Don't want to show</h3><br><h5>Due to some reasons</h5>`;
+            // aDeploy.target = "blank";
             linksDiv.appendChild(aDeploy);
         } else {
             let aCode = document.createElement("a");
@@ -81,6 +95,7 @@
             container.style.display = "none";
             allLinks.style.display = "none";
             notFound.style.display = "flex";
+            notFound.innerHTML = `<h1>Result Not Found!</h1>`;
         }
     }
 
@@ -89,6 +104,7 @@
         container.style.display = "flex";
         allLinks.style.display = "none";
         notFound.style.display = "none";
+        notFound.innerHTML = ``;
 
         let filteredRepositories = [];
         filteredRepositories = repositories;
@@ -114,6 +130,13 @@
         }
     }
     document.addEventListener("keydown", numPad);
+
+
+    document.addEventListener("keyup", () => {
+        if(input.value === "") {
+            filterRepositories();
+        }
+    });
 
     //Attaches event listeners to the select dropdown, button, and close icon and calls the filterRepositories function and clears the input field.
     select.addEventListener("change", filterRepositories);
