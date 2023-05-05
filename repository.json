@@ -11,7 +11,7 @@
     },
     {
         "name": "My Movie Recommendation App",
-        "type": "Project codes",
+        "type": "without deploy",
         "link": "Movie-Recommended-App/"
     },
     {
@@ -58,5 +58,10 @@
         "name": "My All Projects",
         "type": "ALL Projects",
         "link": "My-All-Projects/"
+    },
+    {
+        "name": "Mobile Specifications App",
+        "type": "Working",
+        "link": "Mobile-Specifications/"
     }
 ]
