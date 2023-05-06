@@ -32,51 +32,56 @@
         select.appendChild(option);
     })
 
-    //This code sets the display of container, allLinks, and notFound elements to their initial values.
-    let cross = () => {
+    let showContainer = () => {
         container.style.display = "flex";
         allLinks.style.display = "none";
         notFound.style.display = "none";
+    }
+    let showAllLink = () =>{
+        container.style.display = "none";
+        allLinks.style.display = "block";
+        notFound.style.display = "none";
+    }
+    let showNotFound = () =>{
+        container.style.display = "none";
+        allLinks.style.display = "none";
+        notFound.style.display = "flex";
+    }
+
+    //This code sets the display of container, allLinks, and notFound elements to their initial values.
+    let cross = () => {
+        showContainer();
+    }
+
+    let addLinkDiv = (addLink) => {
+        let aCode = document.createElement("a");
+            aCode.innerHTML = `Code Link`;
+            aCode.target = "blank";
+            aCode.href = `https://github.com/muddussir-raza/${addLink}`;
+            linksDiv.appendChild(aCode);
     }
 
     //This code takes a repository object and generates HTML for links to the corresponding GitHub code and web pages.
     let displayLink = (links) => {
         linksDiv.innerHTML = "";
-        container.style.display = "none";
-        allLinks.style.display = "block";
-        notFound.style.display = "none";
+        showAllLink();
         if (links.type === "Project codes" || links.type === "Practice codes") {
-            let aCode = document.createElement("a");
-            aCode.innerHTML = `Code Link`;
-            aCode.target = "blank";
-            aCode.href = `https://github.com/muddussir-raza/${links.link}`;
-            linksDiv.appendChild(aCode);
+            addLinkDiv(links.link);
             let aDeploy = document.createElement("a");
             aDeploy.innerHTML = `Web Link`;
             aDeploy.target = "blank";
             aDeploy.href = `https://muddussir-raza.github.io/${links.link}`;
             linksDiv.appendChild(aDeploy);
         } else if (links.type === "Working") {
-            container.style.display = "none";
-            allLinks.style.display = "none";
-            notFound.style.display = "flex";
+            showNotFound();
             notFound.innerHTML = `<h1>On Working!</h1>`;
         } else if (links.type === "without deploy") {
-            let aCode = document.createElement("a");
-            aCode.innerHTML = `Code Link`;
-            aCode.target = "blank";
-            aCode.href = `https://github.com/muddussir-raza/${links.link}`;
-            linksDiv.appendChild(aCode);
+            addLinkDiv(links.link);
             let aDeploy = document.createElement("a");
             aDeploy.innerHTML = `<h3>Don't want to show</h3><br><h5>Due to some reasons</h5>`;
-            // aDeploy.target = "blank";
             linksDiv.appendChild(aDeploy);
         } else {
-            let aCode = document.createElement("a");
-            aCode.innerHTML = `Code Link`;
-            aCode.target = "blank";
-            aCode.href = `https://github.com/muddussir-raza/${links.link}`;
-            linksDiv.appendChild(aCode);
+            addLinkDiv(links.link);
         }
     }
 
@@ -92,18 +97,14 @@
                 nameDivs.appendChild(nameDiv);
             })
         } else {
-            container.style.display = "none";
-            allLinks.style.display = "none";
-            notFound.style.display = "flex";
+            showNotFound();
             notFound.innerHTML = `<h1>Result Not Found!</h1>`;
         }
     }
 
     //This code filters the "repositories" array based on the selected "type" option and the search input value.
     let filterRepositories = () => {
-        container.style.display = "flex";
-        allLinks.style.display = "none";
-        notFound.style.display = "none";
+        showContainer();
         notFound.innerHTML = ``;
 
         let filteredRepositories = [];
