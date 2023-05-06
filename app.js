@@ -102,12 +102,14 @@
         }
     }
 
+    let filteredRepositories;
+
     //This code filters the "repositories" array based on the selected "type" option and the search input value.
     let filterRepositories = () => {
         showContainer();
         notFound.innerHTML = ``;
 
-        let filteredRepositories = [];
+        filteredRepositories = [];
         filteredRepositories = repositories;
 
         if (select.value !== "all") {
@@ -120,18 +122,15 @@
                 return repository.name.toLowerCase().includes(input.value.toLowerCase());
             });
         }
-
         displayResult(filteredRepositories);
     }
 
     //This code listens for the "Enter" keypress event and calls the filterRepositories() function when it occurs.
-    let numPad = event => {
+    document.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
             filterRepositories();
         }
-    }
-    document.addEventListener("keydown", numPad);
-
+    });
 
     document.addEventListener("keyup", () => {
         if (input.value === "") {
@@ -139,8 +138,34 @@
         }
     });
 
-    //Attaches event listeners to the select dropdown, button, and close icon and calls the filterRepositories function and clears the input field.
-    select.addEventListener("change", filterRepositories);
+
+    // Define the input and datalist elements
+    let datalist = document.querySelector("#searchSuggestions");
+    // This function generates search suggestions based on the user's input
+    let generateSearchSuggestions = (filteredRepositories) => {
+        // Get the value of the input field and convert it to lowercase
+        let searchValue = input.value.toLowerCase();
+        // Filter the repositories array to get matching names
+        let matchingNames = filteredRepositories.filter(repository => repository.name.toLowerCase().includes(searchValue));
+        datalist.innerHTML = "";
+        // Add new suggestions based on the matchingNames array
+        matchingNames.forEach(repository => {
+            let option = document.createElement("option");
+            option.value = repository.name;
+            datalist.appendChild(option);
+        });
+    }
+
+    input.addEventListener("input", () => {
+        generateSearchSuggestions(filteredRepositories);
+    });
+
+    //This code listens for changes on the select element and calls the filterRepositories() function.
+    select.addEventListener("change", () => {
+        input.value = "";
+        filterRepositories()
+    });
+
     btn.addEventListener("click", filterRepositories);
     x.addEventListener("click", cross);
     filterRepositories();

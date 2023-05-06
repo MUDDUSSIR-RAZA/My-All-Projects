@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta tags -->
     <meta charset="UTF-8">
@@ -21,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -32,7 +34,10 @@
         <select class="select">
             <option value="all" selected>All</option>
         </select>
-        <input class="input" type="text" placeholder="Search Repository">
+
+        
+        <input class="input" type="text" placeholder="Search Repository" list="searchSuggestions">
+        <datalist id="searchSuggestions"></datalist>
         <button class="btn">Search</button>
     </nav>
 
@@ -51,7 +56,7 @@
         </div>
 
         <div class="notFound">
-            
+
         </div>
     </main>
 
@@ -60,4 +65,5 @@
         <h1>MR Developer</h1>
     </footer>
 </body>
+
 </html>
