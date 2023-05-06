@@ -37,12 +37,12 @@
         allLinks.style.display = "none";
         notFound.style.display = "none";
     }
-    let showAllLink = () =>{
+    let showAllLink = () => {
         container.style.display = "none";
         allLinks.style.display = "block";
         notFound.style.display = "none";
     }
-    let showNotFound = () =>{
+    let showNotFound = () => {
         container.style.display = "none";
         allLinks.style.display = "none";
         notFound.style.display = "flex";
@@ -55,10 +55,10 @@
 
     let addLinkDiv = (addLink) => {
         let aCode = document.createElement("a");
-            aCode.innerHTML = `Code Link`;
-            aCode.target = "blank";
-            aCode.href = `https://github.com/muddussir-raza/${addLink}`;
-            linksDiv.appendChild(aCode);
+        aCode.innerHTML = `Code Link`;
+        aCode.target = "blank";
+        aCode.href = `https://github.com/muddussir-raza/${addLink}`;
+        linksDiv.appendChild(aCode);
     }
 
     //This code takes a repository object and generates HTML for links to the corresponding GitHub code and web pages.
@@ -134,7 +134,7 @@
 
 
     document.addEventListener("keyup", () => {
-        if(input.value === "") {
+        if (input.value === "") {
             filterRepositories();
         }
     });
