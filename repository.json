@@ -60,11 +60,6 @@
     "link": "My-All-Projects/"
   },
   {
-    "name": "Mobile Specifications App",
-    "type": "Working",
-    "link": "Mobile-Specifications/"
-  },
-  {
     "name": "Budgeting App",
     "type": "Project codes",
     "link": "Budgeting-App/"
@@ -74,5 +69,11 @@
     "type": "Next JS Apps",
     "link": "Customer-Details/",
     "vercel": "https://customer-details-snowy.vercel.app/"
+  },
+  {
+    "name": "Mobile Specifications App",
+    "type": "Next JS Apps",
+    "link": "Mobile-Specifications-App/",
+    "vercel": "https://mobile-specifications-app.vercel.app/"
   }
 ]
